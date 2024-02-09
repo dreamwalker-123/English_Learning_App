@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">English Learning App</string>
+    <string name="table_of_contents">Оглавление</string>
+    <string name="task1">    Выпишите исчисляемые существительные в одну колонну, а неисчисляемые существительные в другую колонку. При исчисляемых существительных поставьте артикль а или an*: </string>
+    <string name="material1">    Wall, pen, air, chalk, picture, water, match, tea, time, hour, bread, river, friend, copper, cigarette, tobacco, cheese, teacher, glass (стакан), glass (стекло), paper (бумага), paper (газета),
+music, coffee, armchair, gold, ship, milk, shop, idea, ice, furniture, butter, happiness, wood, tree,
+word, ink, money, coin, university, hero, assistance, assistant, darkness, meat, obligation, machine, equipment, instrument. </string>
+    <string name="answer1">    Pen, window, wall, week, clock, ship, library, watch, dress, country, glass, day, party, play,
+bus, leaf, life, colony, hero, fox, half, Negro, mass, eye, language, place, shelf, key, roof, thief,
+ray, bush, mouth, journey.
+Man, woman, tooth, foot, goose, child, mouse.
+Postman, son-in-law, fisherman, schoolgirl, sister-in-law, text-book, pocket-knife, passer-by,
+statesman, editor-in-chief</string>
+</resources>
