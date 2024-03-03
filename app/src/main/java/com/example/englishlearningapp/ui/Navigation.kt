@@ -7,6 +7,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.englishlearningapp.R
 import com.example.englishlearningapp.data.local.Content2
@@ -49,6 +50,7 @@ fun MainApp(
     }
 
     val navController = rememberNavController()
+    val currentBackStack by navController.currentBackStackEntryAsState()
     var index = 0
     NavHost(navController = navController, startDestination = Route.MAIN.path) {
         composable(Route.MAIN.path) {
@@ -70,13 +72,13 @@ fun MainApp(
                     }
                     navController.navigate(Route.ARTICLE.path)
                 },
-                navigateBack = { navController.navigateUp() }
+                navigateBack = { navController.popBackStack() }
             )
         }
         composable(Route.ARTICLE.path) {
             ArticleScreen(
                 item = fullContent[index],
-                navigateBack = { navController.navigateUp() },
+                navigateBack = { navController.popBackStack(Route.TABLE_OF_CONTENT.path, false) },
                 toPrevious = {
                     if (index > 0) index -= 1
                     navController.navigate(Route.ARTICLE.path)
@@ -93,7 +95,7 @@ fun MainApp(
         composable(Route.PRACTICE.path) {
             PracticeScreen(
                 items = resultForSure,
-                navigateBack = { navController.navigateUp() }
+                navigateBack = { navController.popBackStack(Route.ARTICLE.path, false) }
             )
         }
     }

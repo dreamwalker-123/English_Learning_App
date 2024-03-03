@@ -10,8 +10,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.KeyboardArrowLeft
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Button
@@ -49,7 +50,7 @@ fun ArticleScreen(
                 navigationIcon = {
                     IconButton(onClick =  navigateBack ) {
                         Icon(
-                            imageVector = Icons.Filled.ArrowBack,
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Localized description"
                         )
                     }
@@ -59,7 +60,7 @@ fun ArticleScreen(
         bottomBar = {
             BottomAppBar(actions = {
                 IconButton(onClick = { toPrevious() }) {
-                    Icon(Icons.Filled.KeyboardArrowLeft, contentDescription = "Localized description")
+                    Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Localized description")
                 }
                 Button(onClick = toPractice) {
                     Text(text = "К практике")
@@ -69,7 +70,7 @@ fun ArticleScreen(
                 }
                 Spacer(modifier = Modifier.weight(0.1f))
                 IconButton(onClick = { toNext() }) {
-                    Icon(Icons.Filled.KeyboardArrowRight, contentDescription = "Localized description")
+                    Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Localized description")
                 }
             })
         }
