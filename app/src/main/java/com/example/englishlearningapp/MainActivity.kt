@@ -7,23 +7,20 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.englishlearningapp.data.dagger.Computer
 import com.example.englishlearningapp.ui.MainApp
 import com.example.englishlearningapp.ui.theme.EnglishLearningAppTheme
-import java.security.AccessController.getContext
-import javax.inject.Inject
 
 class MainActivity : ComponentActivity() {
 
     // тренировка
-    @Inject
-    lateinit var computer: Computer
+//    @Inject
+//    lateinit var computer: Computer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // тренировка
-        appComponent.inject(this)
+//        appComponent.inject(this)
 
         setContent {
             EnglishLearningAppTheme {
